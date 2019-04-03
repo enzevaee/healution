@@ -27,7 +27,3 @@ function register_healution() {
 
 //hook in function
 add_action('widgets_init','register_healution');
-
-?>
-
-//echo 'wd';

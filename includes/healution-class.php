@@ -106,30 +106,3 @@ class Healution_Widget extends WP_Widget {
 	}
 
 } // class Foo_Widget
-
-?>
-
-</<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Pick a Suburb</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
-</head>
-<body>
-    <h1> We see U </h1>
-
-    <p>LAT:<span></span></p>
-    <p>LON:<span></span></p>
-    <p>ACCURACY:<span></span></p>
-    <p>HEADING:<span></span></p>
-    <p>SPEED:<span></span></p>
-    <p>ALTITUDE:<span></span></p>
-    <p>TIME:<span></span></p>
-    <script src="./geolocation.js"></script>
-
-</body>
-</html>
