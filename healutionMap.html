@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .output {
+            border: 1px solid black;
+            
+        }
+
+        #row {
+            border: 1px solid black;
+
+        }
+        #form{
+            display: inline
+        }
+
+        #suburb{
+            width: 15%;
+            height: 20px
+        }
+
+        #label-type{
+            height: 20px
+        }
+        .label-type-2{
+             width: 20%;
+             height:25px
+        }
+
+        #button{
+            width: 50px;
+            height: 100%;
+        }
+
+        /* #outputTableArt {
+            border: 1px solid black;
+            width: 33.33%
+        } */
+
+        /* Set the size of the div element that contains the map */
+        #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+
+    <h3>Map</h3>
+    <!--The div element for the map -->
+
+    <!-- <form onsubmit="handlesubmit(); return false" name='sub_form'>
+        Surburb: <input type='text' name='suburb' id='suburb'>
+        <input type=submit value='search'>
+    </form> -->
+
+    <form action="#" method="post" id="form" class="demoForm"></form>
+    <fieldset>
+        <legend>Filter</legend>
+        Surburb: <input type='text' name='suburb' id='suburb' placeholder="please enter your suburb name">
+        
+            <label id='label-type'>Type:</label>
+            <select id="select" class="label-type-2" name="selects" >
+                <option value="" selected disabled hidden>Choose type here</option>
+                <option value="art">Art</option>
+                <option value="drinkingFountain">Drinking Fountain</option>
+                <option value="monument">Monument</option>
+            </select>
+            
+            <!-- <p id='typeDisplay'>Default</p> -->
+            <input id='button' type="button" value="Show" onclick="handleSubmit()">
+
+
+        <!-- <p>
+                <input type="button" id="showVal" value="Value Property" />
+                <input type="button" id="showTxt" value="selectedIndex/Text" />
+                <input type="button" id="doLoop" value="Value from Loop" />
+            </p> -->
+    </fieldset>
+    </form>
+    <p id = 'alert'>Find your hobbies<p>
+    <div id="map"></div>
+    <!-- <script type = "text/javascript" src= './drinking_fountain.js'></script>  -->
+    <table style="width:100%">
+        <tr>
+          <th>Art</th>
+          <th>Dringking Fountain</th> 
+          <th>Monument</th>
+        </tr>
+        <tr>
+          <td valign="top" id='outputTableArt' class='output' >Empty</td>
+          <td valign="top" id='outputTableDf' class='output'>Empty</td> 
+          <td valign="top" id='outputTableMonument' class='output'>Empty</td>
+        </tr>
+      </table>
+    <!-- <div>
+        <div id='outputTableArt' class='output'>
+
+        </div>
+        <div id='outputTableDt' class='output'>
+
+        </div>
+        <div id='outputTableMonument' class='output'>
+
+        </div>
+    </div> -->
+
+    <!-- <p id='dashboard'>
+        <form>:
+    </p> -->
+    <script type="text/javascript" src="./suburb.js"></script>
+    <script type="text/javascript" src="./drinkingfountain.js"></script>
+    <script type="text/javascript" src="./art.js"></script>
+    <script type="text/javascript" src="./monument.js"></script>
+    <script type="application/javascript" src="./main_test.js"></script>
+    
+    <!--Load the API from the specified URL
+        * The async attribute allows the browser to render the page while the API loads
+        * The key parameter will contain your own API key (which is not needed for this tutorial)
+        * The callback parameter executes the initMap() function
+        -->
+
+    <script
+        src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+        </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyFJft-jNj7_wcp56wVfEvdem46_p8-XE&language=en&region=AU&callback=initMap">
+
+        </script>
+
+</body>
+
+</html>
